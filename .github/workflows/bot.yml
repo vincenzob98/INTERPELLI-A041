@@ -1,0 +1,38 @@
+name: Interpelli A041
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bot
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TZ: Europe/Rome
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      REGIONI: ${{ vars.REGIONI }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python bot.py --backfill 14
+      - name: Salva gli avvisi già inviati
+        if: always()
+        run: |
+          git config user.name "interpelli-bot"
+          git config user.email "interpelli-bot@users.noreply.github.com"
+          test -f state.json || exit 0
+          git add state.json
+          git diff --cached --quiet || (git commit -m "Aggiorna stato" && git push)

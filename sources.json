@@ -1,0 +1,542 @@
+[
+ {
+  "region": "Abruzzo",
+  "name": "AT Chieti-Pescara",
+  "type": "wp",
+  "url": "https://www.istruzionechietipescara.it"
+ },
+ {
+  "region": "Abruzzo",
+  "name": "AT L'Aquila",
+  "type": "wp",
+  "url": "https://lnx.csalaquila.it/wp"
+ },
+ {
+  "region": "Basilicata",
+  "name": "AT Matera",
+  "type": "wp",
+  "url": "https://www.istruzionematera.it"
+ },
+ {
+  "region": "Basilicata",
+  "name": "AT Potenza",
+  "type": "wp",
+  "url": "https://www.istruzionepotenza.it"
+ },
+ {
+  "region": "Calabria",
+  "name": "AT Catanzaro",
+  "type": "wp",
+  "url": "https://www.istruzione.calabria.it/catanzaro"
+ },
+ {
+  "region": "Calabria",
+  "name": "AT Cosenza",
+  "type": "wp",
+  "url": "https://www.istruzione.calabria.it/cosenza"
+ },
+ {
+  "region": "Calabria",
+  "name": "AT Crotone",
+  "type": "wp",
+  "url": "https://www.istruzione.calabria.it/crotone"
+ },
+ {
+  "region": "Calabria",
+  "name": "AT Reggio Calabria",
+  "type": "wp",
+  "url": "https://www.istruzioneatprc.it"
+ },
+ {
+  "region": "Calabria",
+  "name": "AT Vibo Valentia",
+  "type": "wp",
+  "url": "https://www.istruzione.calabria.it/vibovalentia"
+ },
+ {
+  "region": "Campania",
+  "name": "AT Avellino",
+  "type": "wp",
+  "url": "https://www.atavellino.it"
+ },
+ {
+  "region": "Campania",
+  "name": "AT Caserta",
+  "type": "wp",
+  "url": "https://www.uat-caserta.it"
+ },
+ {
+  "region": "Campania",
+  "name": "AT Napoli",
+  "type": "wp",
+  "url": "https://www.uat-napoli.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Bologna",
+  "type": "wp",
+  "url": "https://bo.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Ferrara",
+  "type": "wp",
+  "url": "https://fe.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Forlì-Cesena",
+  "type": "wp",
+  "url": "https://fc.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Modena",
+  "type": "wp",
+  "url": "https://mo.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Parma",
+  "type": "wp",
+  "url": "https://pr.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Piacenza",
+  "type": "wp",
+  "url": "https://pc.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Ravenna",
+  "type": "wp",
+  "url": "https://ra.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Reggio Emilia",
+  "type": "wp",
+  "url": "https://re.istruzioneer.gov.it"
+ },
+ {
+  "region": "Emilia-Romagna",
+  "name": "AT Rimini",
+  "type": "wp",
+  "url": "https://rn.istruzioneer.gov.it"
+ },
+ {
+  "region": "Lazio",
+  "name": "AT Frosinone",
+  "type": "wp",
+  "url": "https://www.uspistruzione.fr.it/wp2"
+ },
+ {
+  "region": "Lazio",
+  "name": "AT Rieti",
+  "type": "wp",
+  "url": "https://www.usp-rieti.it"
+ },
+ {
+  "region": "Lazio",
+  "name": "AT Roma",
+  "type": "wp",
+  "url": "https://www.atpromaistruzione.it/atp"
+ },
+ {
+  "region": "Marche",
+  "name": "AT Ascoli Piceno",
+  "type": "wp",
+  "url": "https://www.uspascolipiceno.it"
+ },
+ {
+  "region": "Marche",
+  "name": "AT Pesaro Urbino",
+  "type": "wp",
+  "url": "https://www.usppesarourbino.it"
+ },
+ {
+  "region": "Piemonte",
+  "name": "AT Alessandria-Asti",
+  "type": "wp",
+  "url": "https://www.istruzionepiemonte.it/alessandria-asti"
+ },
+ {
+  "region": "Piemonte",
+  "name": "AT Biella",
+  "type": "wp",
+  "url": "https://www.istruzionepiemonte.it/biella"
+ },
+ {
+  "region": "Piemonte",
+  "name": "AT Cuneo",
+  "type": "wp",
+  "url": "https://www.istruzionepiemonte.it/cuneo"
+ },
+ {
+  "region": "Piemonte",
+  "name": "AT Novara",
+  "type": "wp",
+  "url": "https://www.istruzionepiemonte.it/novara"
+ },
+ {
+  "region": "Piemonte",
+  "name": "AT Torino",
+  "type": "wp",
+  "url": "https://www.istruzionepiemonte.it/torino"
+ },
+ {
+  "region": "Piemonte",
+  "name": "AT Verbania",
+  "type": "wp",
+  "url": "https://www.istruzionepiemonte.it/verbania"
+ },
+ {
+  "region": "Piemonte",
+  "name": "AT Vercelli",
+  "type": "wp",
+  "url": "https://www.istruzionepiemonte.it/vercelli"
+ },
+ {
+  "region": "Puglia",
+  "name": "AT Bari",
+  "type": "wp",
+  "url": "https://www.uspbari.it/usp"
+ },
+ {
+  "region": "Puglia",
+  "name": "AT BAT",
+  "type": "wp",
+  "url": "https://www.istruzionebat.it"
+ },
+ {
+  "region": "Puglia",
+  "name": "AT Brindisi",
+  "type": "wp",
+  "url": "https://www.istruzionebrindisi.it"
+ },
+ {
+  "region": "Puglia",
+  "name": "AT Foggia",
+  "type": "wp",
+  "url": "https://www.ustfoggia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "USR Sicilia",
+  "type": "wp",
+  "url": "https://www.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Agrigento",
+  "type": "wp",
+  "url": "https://ag.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Caltanissetta-Enna",
+  "type": "wp",
+  "url": "https://cl-en.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Catania",
+  "type": "wp",
+  "url": "https://ct.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Messina",
+  "type": "wp",
+  "url": "https://me.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Palermo",
+  "type": "wp",
+  "url": "https://pa.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Ragusa",
+  "type": "wp",
+  "url": "https://rg.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Siracusa",
+  "type": "wp",
+  "url": "https://sr.usr.sicilia.it"
+ },
+ {
+  "region": "Sicilia",
+  "name": "AT Trapani",
+  "type": "wp",
+  "url": "https://tp.usr.sicilia.it"
+ },
+ {
+  "region": "Toscana",
+  "name": "AT Firenze",
+  "type": "wp",
+  "url": "https://www.ust.fi.it"
+ },
+ {
+  "region": "Toscana",
+  "name": "AT Lucca",
+  "type": "wp",
+  "url": "https://www.ustlucca.it"
+ },
+ {
+  "region": "Toscana",
+  "name": "AT Massa-Carrara",
+  "type": "wp",
+  "url": "https://www.ustms.it"
+ },
+ {
+  "region": "Toscana",
+  "name": "AT Pistoia",
+  "type": "wp",
+  "url": "https://www.ufficioscolasticoprovinciale.pistoia.it"
+ },
+ {
+  "region": "Toscana",
+  "name": "AT Prato",
+  "type": "wp",
+  "url": "https://www.ufficioscolasticoprovinciale.prato.it"
+ },
+ {
+  "region": "Toscana",
+  "name": "AT Siena",
+  "type": "wp",
+  "url": "https://www.uspsi.it"
+ },
+ {
+  "region": "Umbria",
+  "name": "USR Umbria",
+  "type": "wp",
+  "url": "https://istruzione.umbria.it"
+ },
+ {
+  "region": "Veneto",
+  "name": "AT Belluno",
+  "type": "wp",
+  "url": "https://belluno.istruzioneveneto.gov.it"
+ },
+ {
+  "region": "Veneto",
+  "name": "AT Padova",
+  "type": "wp",
+  "url": "https://padova.istruzioneveneto.gov.it"
+ },
+ {
+  "region": "Veneto",
+  "name": "AT Rovigo",
+  "type": "wp",
+  "url": "https://rovigo.istruzioneveneto.gov.it"
+ },
+ {
+  "region": "Veneto",
+  "name": "AT Treviso",
+  "type": "wp",
+  "url": "https://treviso.istruzioneveneto.gov.it"
+ },
+ {
+  "region": "Veneto",
+  "name": "AT Venezia",
+  "type": "wp",
+  "url": "https://venezia.istruzioneveneto.gov.it"
+ },
+ {
+  "region": "Veneto",
+  "name": "AT Vicenza",
+  "type": "wp",
+  "url": "https://vicenza.istruzioneveneto.gov.it"
+ },
+ {
+  "region": "Toscana",
+  "name": "AT Arezzo",
+  "type": "rss",
+  "url": "https://www.arezzoistruzione.it/usparezzo/index.php/interpelli?format=feed&type=rss"
+ },
+ {
+  "region": "Veneto",
+  "name": "AT Verona",
+  "type": "rss",
+  "url": "https://www.istruzioneverona.it/?s=interpell&feed=rss2"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Bergamo",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Brescia",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Como",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/como/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Cremona",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/cremona/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Lecco",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Lodi",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/lodi/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Mantova",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/mantova/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Milano",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/milano/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Monza Brianza",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/monza-brianza/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Pavia",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/pavia/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Sondrio",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/sondrio/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Lombardia",
+  "name": "AT Varese",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/varese/interpelli-ricerca-supplenti"
+ },
+ {
+  "region": "Sardegna",
+  "name": "AT Cagliari",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/cagliari"
+ },
+ {
+  "region": "Sardegna",
+  "name": "AT Nuoro",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/nuoro"
+ },
+ {
+  "region": "Sardegna",
+  "name": "AT Oristano",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/oristano"
+ },
+ {
+  "region": "Sardegna",
+  "name": "AT Sassari",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/sassari"
+ },
+ {
+  "region": "Molise",
+  "name": "AT Campobasso",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/campobasso"
+ },
+ {
+  "region": "Molise",
+  "name": "AT Isernia",
+  "type": "html",
+  "url": "https://www.mim.gov.it/web/isernia"
+ },
+ {
+  "region": "Liguria",
+  "name": "AT Genova",
+  "type": "html",
+  "url": "https://servizi.istruzioneliguria.gov.it/provincia.php?p=GE"
+ },
+ {
+  "region": "Liguria",
+  "name": "AT Imperia",
+  "type": "html",
+  "url": "https://servizi.istruzioneliguria.gov.it/provincia.php?p=IM"
+ },
+ {
+  "region": "Liguria",
+  "name": "AT La Spezia",
+  "type": "html",
+  "url": "https://servizi.istruzioneliguria.gov.it/provincia.php?p=SP"
+ },
+ {
+  "region": "Liguria",
+  "name": "AT Savona",
+  "type": "html",
+  "url": "https://servizi.istruzioneliguria.gov.it/provincia.php?p=SV"
+ },
+ {
+  "region": "Friuli-Venezia Giulia",
+  "name": "AT Gorizia",
+  "type": "html",
+  "url": "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/Interpelli/"
+ },
+ {
+  "region": "Friuli-Venezia Giulia",
+  "name": "AT Pordenone",
+  "type": "html",
+  "url": "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/Interpelli/"
+ },
+ {
+  "region": "Friuli-Venezia Giulia",
+  "name": "AT Trieste",
+  "type": "html",
+  "url": "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-trieste/Interpelli/"
+ },
+ {
+  "region": "Friuli-Venezia Giulia",
+  "name": "AT Udine",
+  "type": "html",
+  "url": "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-udine/Interpelli/"
+ },
+ {
+  "region": "Umbria",
+  "name": "Interpelli aperti Umbria",
+  "type": "html",
+  "url": "https://istruzione.umbria.it/interpelli/interpelli-aperti/"
+ },
+ {
+  "region": "Veneto",
+  "name": "Tabella Treviso",
+  "type": "html",
+  "url": "https://treviso.istruzioneveneto.gov.it/tabella-avvisi-finalizzati-al-reclutamento-docenti-om-88-2024-art-13-comma-23/"
+ },
+ {
+  "region": "Veneto",
+  "name": "Tabella Vicenza",
+  "type": "html",
+  "url": "https://vicenza.istruzioneveneto.gov.it/avvisi-interpelli-docenti-vicenza/"
+ }
+]
