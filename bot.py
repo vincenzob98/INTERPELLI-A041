@@ -104,8 +104,13 @@ MECC_RE = re.compile(r"\b([A-Z]{2})[A-Z]{2}\d{5}[0-9A-Z]\b")
 SIGLA_RE = re.compile(r"\(([A-Z]{2})\)")
 MESI = {m: i + 1 for i, m in enumerate(
     "gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre".split())}
-DATE_PAT = r"(?:(\d{1,2})[/.\-_](\d{1,2})[/.\-_](\d{2,4})|(\d{1,2})\s+(" + "|".join(MESI) + r")\s+(\d{4}))"
-DEADLINE_RE = re.compile(r"(?:scadenza|entro|non\s+oltre|termine\s+(?:di\s+)?(?:presentazione|invio))[^.;\n]{0,70}?" + DATE_PAT, re.I)
+DATE_PAT = r"(?:(\d{1,2})\s?[/.\-_]\s?(\d{1,2})\s?[/.\-_]\s?(\d{2,4})|(\d{1,2})\s+(" + "|".join(MESI) + r")\s+(\d{4}))"
+# Tra la parola chiave e la data può esserci "le ore 12.00 del giorno martedì": il punto chiude la frase solo se seguito da uno spazio.
+DEADLINE_RE = re.compile(r"(?:scadenza|entro|non\s+oltre|termine\s+(?:di\s+|per\s+)?(?:la\s+|l.)?(?:presentazione|invio))(?:(?!\.\s)[^;]){0,110}?" + DATE_PAT, re.I)
+NOT_DEADLINE_RE = re.compile(r"servizio|contratto|incarico|accettazion|assunzion", re.I)
+DEADLINE_HOUR_RE = re.compile(r"\bore\s*(\d{1,2})(?:\s?[:.,]\s?(\d{2}))?", re.I)
+RELATIVE_DEADLINE_RE = re.compile(r"entro\s+(?:le\s+)?(?:successive\s+)?(\d{1,3})\s+ore\s+dalla\s+(?:data\s+di\s+)?pubblicazione", re.I)
+PLATFORM_RE = re.compile(r"interpell|portaleargo|spaggiari|nuvola|madisoft|\.edu\.it", re.I)
 UNTIL_TITLE_RE = re.compile(r"(?:fino\s+al|sino\s+al|\bal)\s+" + DATE_PAT, re.I)
 UNTIL_TEXT_RE = re.compile(r"(?:fino\s+al|sino\s+al)\s+" + DATE_PAT, re.I)
 HOURS_RE = re.compile(r"\b(\d{1,2})\s*(?:h\b|ore\b(?!\s*\d{1,2}[:.]\d))|\bh\.?\s*(\d{1,2})\b|\bn\.?\s*ore\s*(\d{1,2})\b", re.I)
@@ -133,6 +138,7 @@ class Item:
     date: str = ""
     pdf: str = ""
     text: str = ""
+    body_links: tuple = ()
     mecc: str = ""
     sigla: str = ""
     comune: str = ""
@@ -142,6 +148,8 @@ class Item:
     ore: str = ""
     fino_dt: dt.date | None = None
     scadenza_dt: dt.date | None = None
+    scadenza_ora: str = ""
+    scadenza_nota: str = ""
     fp: str = ""
 
 
@@ -220,7 +228,7 @@ def extract_items(post):
     if matched or is_a041(title, title=True):
         pdfs = real_pdfs(post.html, post.link)
         return [Item(key=post.link, title=title[:220], link=post.link, source=post.source, date=post.date,
-                     pdf=pdfs[0] if pdfs else "", text=body[:3000])]
+                     pdf=pdfs[0] if pdfs else "", text=body[:3000], body_links=tuple(u for u, _ in links_in(post.html, post.link)))]
     return []
 
 
@@ -274,9 +282,21 @@ def find_comune(text):
     return (with_prep or [c for _, c in found] or [None])[-1]
 
 
+def find_deadline(text):
+    """Scadenza per candidarsi. Scarta le date riferite al contratto o alla presa di servizio."""
+    for m in DEADLINE_RE.finditer(text):
+        context = text[max(0, m.start() - 40):m.start()] + m.group(0)
+        date = parse_date(m.groups())
+        if date and not NOT_DEADLINE_RE.search(context):
+            hour = DEADLINE_HOUR_RE.search(m.group(0))
+            return date, f"{int(hour.group(1)):02d}:{hour.group(2) or '00'}" if hour else ""
+    return None, ""
+
+
 def enrich(item, extra_text=""):
     """Ricava scuola, luogo, ore e date. Non usa mai la sede di chi pubblica: gli uffici si ripubblicano a vicenda."""
-    text = f"{item.title} {item.text} {extra_text}"
+    text = re.sub(r"\s+", " ", f"{item.title} {item.text} {extra_text}")
+    text = re.sub(r"\b(20\d) (\d)\b", r"\1\2", text)  # i PDF spezzano le date: "202 6"
     named = f"{item.title} {urllib.parse.unquote(item.link)}".upper()
 
     candidates = list(MECC_RE.finditer(named)) + list(MECC_RE.finditer(text[:6000]))
@@ -304,16 +324,18 @@ def enrich(item, extra_text=""):
         if 1 <= int(value) <= 24:
             item.ore = value
 
-    deadline = DEADLINE_RE.search(text)
-    if deadline:
-        item.scadenza_dt = parse_date(deadline.groups())
+    item.scadenza_dt, item.scadenza_ora = find_deadline(text)
+    relative = RELATIVE_DEADLINE_RE.search(text)
+    if relative and not item.scadenza_dt:
+        item.scadenza_nota = f"entro {relative.group(1)} ore dalla pubblicazione"
     until = UNTIL_TITLE_RE.search(item.title) or UNTIL_TEXT_RE.search(text[:3000])
     if until:
         item.fino_dt = parse_date(until.groups())
-    # Una data anteriore alla pubblicazione è una citazione normativa letta male, non la scadenza dell'avviso.
+    # Una data molto anteriore alla pubblicazione è una citazione normativa letta male, non la scadenza dell'avviso.
     published = dt.date.fromisoformat(item.date[:10]) if item.date else dt.date.today() - dt.timedelta(days=3)
-    if item.scadenza_dt and item.scadenza_dt < published:
-        item.scadenza_dt = None
+    # Un avviso può essere ripubblicato dopo la scadenza, quindi serve un certo margine.
+    if item.scadenza_dt and item.scadenza_dt < published - dt.timedelta(days=14):
+        item.scadenza_dt, item.scadenza_ora = None, ""
     if item.fino_dt and item.fino_dt < published:
         item.fino_dt = None
 
@@ -382,7 +404,12 @@ def format_message(item):
     if details:
         lines.append("🕐 " + " · ".join(details))
     if item.scadenza_dt:
-        lines.append(f"⏳ Scadenza: <b>{item.scadenza_dt:%d/%m/%Y}</b>")
+        hour = f" ore {item.scadenza_ora}" if item.scadenza_ora else ""
+        lines.append(f"⏳ Scadenza: <b>{item.scadenza_dt:%d/%m/%Y}{hour}</b>")
+    elif item.scadenza_nota:
+        lines.append(f"⏳ Scadenza: <b>{e(item.scadenza_nota)}</b>")
+    else:
+        lines.append("⏳ Scadenza: non trovata, controlla l'avviso")
     links = [f'<a href="{e(item.link, quote=True)}">Apri l\'avviso</a>']
     if item.pdf and item.pdf != item.link:
         links.append(f'<a href="{e(item.pdf, quote=True)}">PDF</a>')
@@ -504,17 +531,37 @@ def details_for(item):
         return pdf_text(item.pdf)
     if is_pdf(item.link):
         return pdf_text(item.link)
+    # Un post spesso rimanda alla scheda di un altro ufficio, e quella scheda al PDF o alla piattaforma della scuola.
+    for url in item.body_links[:3]:
+        text = read_notice_page(item, url)
+        if text:
+            return text
+    return read_notice_page(item, item.link)
+
+
+def read_notice_page(item, url):
     try:
-        page = http_get(item.link, limit=2_000_000).decode("utf8", "ignore")
+        page = http_get(url, limit=2_000_000).decode("utf8", "ignore")
     except Exception:
         return ""
-    pdfs = real_pdfs(page, item.link)
+    pdfs = real_pdfs(page, url)
     if pdfs:
         item.pdf = pdfs[0]
         text = pdf_text(item.pdf)
         if text:
             return text
-    return clean(page)[:3000]
+    if "mim.gov.it" not in url:
+        return ""  # nelle pagine dei siti locali il resto del testo è menu e altri avvisi
+    host = urllib.parse.urlparse(url).netloc
+    for link, _ in links_in(page, url):
+        if urllib.parse.urlparse(link).netloc not in (host, "") and PLATFORM_RE.search(link):
+            try:
+                external = clean(http_get(link, limit=2_000_000).decode("utf8", "ignore"))
+            except Exception:
+                continue
+            if len(external) > 200:
+                return external[:8000]
+    return ""
 
 
 # --- Telegram ----------------------------------------------------------------

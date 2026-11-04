@@ -15,7 +15,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     env:
       TZ: Europe/Rome
       TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -35,4 +35,4 @@ jobs:
           git config user.email "interpelli-bot@users.noreply.github.com"
           test -f state.json || exit 0
           git add state.json
-          git diff --cached --quiet || (git commit -m "Aggiorna stato" && git push)
+          git diff --cached --quiet || (git commit -m "Aggiorna stato" && git pull --rebase && git push)

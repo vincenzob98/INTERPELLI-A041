@@ -98,6 +98,33 @@ class Dati(unittest.TestCase):
                         link="https://usr.it/y", source="USR"))
         self.assertEqual(a.fp, b.fp)
 
+    def test_formati_reali_di_scadenza(self):
+        casi = [("entro e non oltre le ore 12.00 del giorno martedì 27/10/2026 con oggetto", dt.date(2026, 10, 27), "12:00"),
+                ("entro le ore 11,00 del giorno 06/11/2026.", dt.date(2026, 11, 6), "11:00"),
+                ("entro e non oltre le ore 08: 00 del 02/11/ 2026 la propria", dt.date(2026, 11, 2), "08:00"),
+                ("ENTRO E NON OLTRE LE ORE 7.30 del 30/10/2026.", dt.date(2026, 10, 30), "07:30"),
+                ("candidatura entro le ore 08.00 di giovedì 22 ottobre 202 6 mediante", dt.date(2026, 10, 22), "08:00"),
+                ("Termine per l'invio delle candidature: entro le ore 13.00 del giorno 21/10/2026.", dt.date(2026, 10, 21), "13:00")]
+        for testo, data, ora in casi:
+            item = enrich(Item(key="k", title="Interpello A041", link="https://e.it/x", source="AT", date="2026-10-20T09:00:00"), testo)
+            self.assertEqual((item.scadenza_dt, item.scadenza_ora), (data, ora), testo)
+
+    def test_date_del_contratto_non_sono_la_scadenza(self):
+        for testo in ("La presa di servizio dovrà avvenire entro il 10/11/2026", "rettifica della data di scadenza del contratto 30 giugno 2027",
+                      "accettata entro 24 ore. Gli eventuali contratti al 31/08/2027"):
+            item = enrich(Item(key="k", title="Interpello A041", link="https://e.it/x", source="AT", date="2026-10-20T09:00:00"), testo)
+            self.assertIsNone(item.scadenza_dt, testo)
+
+    def test_scadenza_mancante_viene_dichiarata(self):
+        self.assertIn("Scadenza: non trovata", format_message(self.enriched("Interpello A041")))
+        relativa = self.enriched("Interpello A041", "domande entro 24 ore dalla pubblicazione")
+        self.assertIn("entro 24 ore dalla pubblicazione", format_message(relativa))
+
+    def test_avviso_ripubblicato_dopo_la_scadenza_e_scaduto(self):
+        item = enrich(Item(key="k", title="Interpello A041", link="https://e.it/x", source="AT", date="2026-11-04T09:00:00"),
+                      "entro le ore 12:00 del giorno 02/11/2026")
+        self.assertTrue(is_expired(item, dt.date(2026, 11, 4)))
+
     def test_citazione_normativa_non_scarta_l_avviso(self):
         item = enrich(Item(key="k", title="Interpello A041", link="https://e.it/x", source="AT", date="2026-11-04T10:00:00"),
                       "ai sensi della nota, domande entro il 31/08/2025")
