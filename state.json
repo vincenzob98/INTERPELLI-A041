@@ -268,7 +268,10 @@
 "https://www.mim.gov.it/web/milano/-/iis-m-curie-p-sraffa-milano": "2026-11-16T18:00:38",
 "https://www.mim.gov.it/web/milano/-/iis-bernocchi-legnano-6": "2026-11-16T18:00:38",
 "https://fe.istruzioneer.gov.it/2026/11/16/interpello-per-supplenza-su-classe-di-concorso-a041-scienze-e-tecnologie-informatiche-11/": "2026-11-16T18:00:38",
-"https://lnx.csalaquila.it/wp/2026/11/16/interpelli-nazionali-c-d-c-a026-a021-a020-a041-a045-as2a-as2c-as2b-i-i-s-normanno-aversa-ce/": "2026-11-16T18:00:38"
+"https://lnx.csalaquila.it/wp/2026/11/16/interpelli-nazionali-c-d-c-a026-a021-a020-a041-a045-as2a-as2c-as2b-i-i-s-normanno-aversa-ce/": "2026-11-16T18:00:38",
+"https://www.mim.gov.it/web/cagliari/-/interpello-nazionale-classe-di-concorso-a041-scienze-e-tecnologie-informatiche-per-n-15-ore-settimanali-fino-al-22-12-2026": "2026-11-17T18:52:51",
+"https://www.mim.gov.it/web/monza-brianza/-/interpello-per-supplenza-su-classe-di-concorso-a041-scuola-sec-di-ii-grado-19": "2026-11-17T18:52:51",
+"http://www.usppesarourbino.it/wp-content/uploads/2026/11/Interpello-A041.zip": "2026-11-17T18:52:51"
 },
 "fps": {
 "969c92e1f644f76e": "2026-11-04T18:48:19",
@@ -314,7 +317,10 @@
 "milano|18|2026-12-15": "2026-11-16T18:00:38",
 "legnano|18|2027-06-30": "2026-11-16T18:00:38",
 "bc04d0aa2618814e": "2026-11-16T18:00:38",
-"5ccfcc1aaebdaee4": "2026-11-16T18:00:38"
+"5ccfcc1aaebdaee4": "2026-11-16T18:00:38",
+"CAIS011007|15|2026-12-22": "2026-11-17T18:52:51",
+"monza||2026-11-18": "2026-11-17T18:52:51",
+"3b3b443c87f7bbd8": "2026-11-17T18:52:51"
 },
 "places": {
 "como": {
@@ -459,6 +465,18 @@
 },
 "aversa": {
 "at": "2026-11-16T18:00:38",
+"complete": false
+},
+"CAIS011007": {
+"at": "2026-11-17T18:52:51",
+"complete": true
+},
+"monza": {
+"at": "2026-11-17T18:52:51",
+"complete": false
+},
+"urbino": {
+"at": "2026-11-17T18:52:51",
 "complete": false
 }
 },
@@ -1026,7 +1044,9 @@
 "https://www.mim.gov.it/web/lodi/-/liceo-statale-maffeo-vegio-lodi": "2026-11-16T18:00:38",
 "https://www.ust.fi.it/interpello-nazionale-per-incarico-a-tempo-determinato-per-n-1-posto-di-n-1-ora-n11-supplenza-fino-al-termine-attivita-didattiche-dal-18112026-al-30062027-classe-di-concorso-bb02/": "2026-11-17T01:46:43",
 "https://www.ust.fi.it/interpello-per-supplenza-su-classe-di-concorso-as12-discipline-letterarie-negli-istituti-di-istruzione-secondaria-di-i-e-di-ii-grado/": "2026-11-17T01:46:43",
-"https://www.mim.gov.it/web/bergamo/-/interpelli-per-il-conferimento-di-supplenza-personale-docente-n-97-1": "2026-11-17T09:35:09"
+"https://www.mim.gov.it/web/bergamo/-/interpelli-per-il-conferimento-di-supplenza-personale-docente-n-97-1": "2026-11-17T09:35:09",
+"https://fe.istruzioneer.gov.it/2026/11/17/interpello-per-una-supplenza-su-classe-di-concorso-bb02-conversazione-in-lingua-straniera-inglese-nelle-scuole-secondarie-di-secondo-grado-3/": "2026-11-17T18:52:51",
+"https://www.mim.gov.it/web/bergamo/-/interpelli-per-il-conferimento-di-supplenza-personale-docente-n-98-1": "2026-11-17T18:52:51"
 },
 "seeded": [
 "AT Chieti-Pescara",
@@ -1122,363 +1142,363 @@
 ],
 "health": {
 "AT Chieti-Pescara": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT L'Aquila": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Matera": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Potenza": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Catanzaro": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Cosenza": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Crotone": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Vibo Valentia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Reggio Calabria": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Avellino": {
 "ok": "2026-11-17T09:35:09",
-"error": ""
+"error": "RuntimeError: Expecting value: line 1 column 1 (char 0)"
 },
 "AT Caserta": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Napoli": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Bologna": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Ferrara": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Forlì-Cesena": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Modena": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Parma": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Piacenza": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Ravenna": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Reggio Emilia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Rimini": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Frosinone": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Rieti": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Roma": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Ascoli Piceno": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Pesaro Urbino": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Alessandria-Asti": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Biella": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Cuneo": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Novara": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Torino": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Verbania": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Vercelli": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Bari": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT BAT": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Brindisi": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Foggia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "USR Sicilia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Agrigento": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Caltanissetta-Enna": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Catania": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Messina": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Palermo": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Ragusa": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Siracusa": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Trapani": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Firenze": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Lucca": {
 "ok": "2026-11-17T09:35:09",
-"error": ""
+"error": "RuntimeError: Expecting value: line 1 column 1 (char 0)"
 },
 "AT Massa-Carrara": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Pistoia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Prato": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Siena": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "USR Umbria": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "Interpelli aperti Umbria": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Belluno": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Padova": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Rovigo": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Treviso": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "Tabella Treviso": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Venezia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Vicenza": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "Tabella Vicenza": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Arezzo": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Verona": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Bergamo": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Brescia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Como": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Cremona": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Lecco": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Lodi": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Mantova": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Milano": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Monza Brianza": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Pavia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Sondrio": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Varese": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Cagliari": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Nuoro": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Oristano": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Sassari": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Campobasso": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Isernia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Genova": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Imperia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT La Spezia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Savona": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Gorizia": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Pordenone": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Trieste": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 },
 "AT Udine": {
-"ok": "2026-11-17T09:35:09",
+"ok": "2026-11-17T18:52:51",
 "error": ""
 }
 },
